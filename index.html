@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/rodrigoandregg" title="Visit my Github profile" target="_blank">Rodrigo Andre Gutierrez</a>.
-  </div>
+  <main>
+    <section class="stats-card__container">
+      <figure class="stats-card__picture">
+        <img src="images/image-header-mobile.jpg" alt="women working on the office" class="stats-card__img">
+      </figure>
+      <div class="stats-card__info">
+        <div class="info__texts">
+          <h1 class="texts__title">Get <span class="accent">insights</span> that help your business grow.</h1>
+          <p class="texts__paragraph">Discover the benefits of data analytics and make better decisions regarding
+            revenue, customer experience, and overall efficiency.</p>
+        </div>
+        <div class="info__stats">
+          <div class="stats__data">
+            <h2 class="data__heading">10k+</h2>
+            <p class="data__paragraph">companies</p>
+          </div>
+          <div class="stats__data">
+            <h2 class="data__heading">314</h2>
+            <p class="data__paragraph">templates</p>
+          </div>
+          <div class="stats__data">
+            <h2 class="data__heading">12M+</h2>
+            <p class="data__paragraph">queries</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/rodrigoandregg" title="Visit my Github profile" target="_blank">Rodrigo Andre
+        Gutierrez</a>.
+    </div>
+  </footer>
 </body>
+
 </html>

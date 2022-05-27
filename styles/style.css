@@ -5,16 +5,116 @@
     --font1: 'Inter', sans-serif;
     --font2: 'Lexend Deca', sans-serif;
     /* colors */
-    --mainbackground: hsl(233, 47%, 7%);
-    --cardbackground: hsl(244, 38%, 16%);
+    --mainbg: hsl(233, 47%, 7%);
+    --cardbg: hsl(244, 38%, 16%);
     --accent: hsl(277, 64%, 61%);
-    --mainheadingstats: hsl(0, 0%, 100%);
-    --mainparagraph: hsla(0, 0%, 100%, 0.75);
-    --headings: hsla(0, 0%, 100%, 0.6);
+    --maintitle: hsl(0, 0%, 100%);
+    --mainparagraphs: hsla(0, 0%, 100%, 0.75);
+    --statsheadings: hsla(0, 0%, 100%, 0.6);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font1);
+    background-color: var(--mainbg);
+    color: var(--mainparagraphs);
+}
+
+/* stats card */
+
+.stats-card__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    margin: 10vh auto;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 15px;
+    background-color: var(--cardbg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stats-card__picture {
+    line-height: 0;
+    position: relative;
+}
+
+.stats-card__picture::before {
+    content: "";
+    background-color: var(--accent);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    mix-blend-mode: multiply;
+}
+
+.stats-card__img {
+    width: 100%;
+}
+
+.stats-card__info {
+    display: grid;
+    gap: 30px;
+    padding: 30px;
+}
+
+.info__texts {
+    display: grid;
+    gap: 30px;
+}
+
+.texts__title {
+    font-size: 1.7rem;
+    color: var(--maintitle);
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.texts__paragraph {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.info__stats {
+    display: grid;
+    gap: 30px;
+}
+
+.stats__data {
+    display: grid;
+    gap: 8px;
+}
+
+.data__heading {
+    color: var(--maintitle);
+    font-size: 1.5rem;
+}
+
+.data__paragraph {
+    font-family: var(--font2);
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: 2px;
+}
+
+/* footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
